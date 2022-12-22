@@ -39,7 +39,7 @@ def post_song(request):
                 # else:
                 #     return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
 
-@api_view(['GET','PUT'])
+@api_view(['GET','PUT','DELETE'])
 def song_detail(request, pk):
     song = get_object_or_404(Song, pk=pk)
         # Place this duplicated line of code outside of if/elif statement so both methods use it (originally inside both 'GET' and 'PUT' methods)
@@ -60,7 +60,7 @@ def song_detail(request, pk):
                     # except Song.DoesNotExist:
                     #     return Response(status=status.HTTP_404_NOT_FOUND)
     elif request.method == 'PUT':
-            #! CODE THOUGHT PROCESS (PUT/UPDATE): We want to get the original song from database via its 'pk/id' in order to make any changes/updates on it
+            #! CODE THOUGHT PROCESS (PUT(Update)): We want to get the original song from database via its 'pk/id' in order to make any changes/updates on it
                 #! After making changes to that song/pk#, we want to return that Song object to the database with all the changes that we've made
                 # Using serializer when updating something: =>   
                     # 1st: Pass in the current version of the object (song) 
@@ -70,6 +70,13 @@ def song_detail(request, pk):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data)
+    
+    elif request.method == 'DELETE':
+            #! CODE THOUGHT PROCESS (DELETE): This method will also use the 'song = get_object_or_404(Song, pk=pk)' because it is Deleting a specified requested pk #
+        song.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
 
     
     

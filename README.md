@@ -17,7 +17,7 @@ album - CharField
 release_date - DateField 
 genre - CharField 
 
-(2.5 points) As a developer, I want my API to serve content on the following URLs paths: 
+☑️(2.5 points) As a developer, I want my API to serve content on the following URLs paths: 
 Paths must match these exactly! 
 ‘music/' 
 ‘music/<int:pk>/’ 
@@ -45,10 +45,10 @@ Paths must match these exactly!
 ☑️• Responds with the newly updated song object. 
 
 (5 points) As a developer, I want to create a DELETE endpoint that does the following things: 
-• Accepts a value from the request’s URL. (The id of the song to delete).
-• Returns a 204 status code. 
+☑️• Accepts a value from the request’s URL. (The id of the song to delete).
+☑️• Returns a 204 status code. 
 
-(5 points) As a developer, I want to use Postman to make a POST, PUT, DELETE, and both GET requests (get by id and get all) request to my REST web API, save it to a collection, and then export it as a JSON from Postman.  
+☑️(5 points) As a developer, I want to use Postman to make a POST, PUT, DELETE, and both GET requests (get by id and get all) request to my REST web API, save it to a collection, and then export it as a JSON from Postman.  
 
 BONUS 
 (5 points) As a developer, I want to add the ability to “like” a song through the web API and have the number of likes saved in the database with the song.
