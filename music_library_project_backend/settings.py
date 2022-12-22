@@ -122,3 +122,9 @@ try:
     from music_library_project_backend.local_settings import *
 except ImportError:
     pass
+
+# REST_FRAMEWORK = {
+    # USE_L10N = True
+    # USE_I18N = True
+    # DATE_INPUT_FORMATS = ['%m-%d-%Y']
+# }

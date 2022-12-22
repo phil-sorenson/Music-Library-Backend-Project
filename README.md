@@ -32,10 +32,10 @@ Paths must match these exactly!
 • Responds with the song in the database that has the id that was sent through the URL. 
 
 (5 points) As a developer, I want to create a POST endpoint that does the following things: 
-• Accepts a body object from the request in the form of a Song model. 
-• Adds the new song to the database. 
-• Returns a 201 status code. 
-• Responds with the newly created song object. 
+☑️• Accepts a body object from the request in the form of a Song model. 
+☑️• Adds the new song to the database. 
+☑️• Returns a 201 status code. 
+☑️• Responds with the newly created song object. 
 
 (5 points) As a developer, I want to create a PUT endpoint that does the following things: 
 • Accepts a value from the request’s URL (The id of the song to be updated). 
