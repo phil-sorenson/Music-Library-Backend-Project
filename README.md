@@ -27,9 +27,9 @@ Paths must match these exactly!
 ☑️(5 points) As a developer, I want to create a GET endpoint the responds with a 200 success status code and all of the songs within the Music table. 
 
 (5 points) As a developer, I want to create a GET by id endpoint that does the following things: 
-• Accepts a value from the request’s URL (The id of the song to retrieve). 
-• Returns a 200 status code. 
-• Responds with the song in the database that has the id that was sent through the URL. 
+☑️• Accepts a value from the request’s URL (The id of the song to retrieve). 
+☑️• Returns a 200 status code. 
+☑️• Responds with the song in the database that has the id that was sent through the URL. 
 
 (5 points) As a developer, I want to create a POST endpoint that does the following things: 
 ☑️• Accepts a body object from the request in the form of a Song model. 
@@ -38,11 +38,11 @@ Paths must match these exactly!
 ☑️• Responds with the newly created song object. 
 
 (5 points) As a developer, I want to create a PUT endpoint that does the following things: 
-• Accepts a value from the request’s URL (The id of the song to be updated). 
-• Accepts a body object from the request in the form of a Song model. 
-• Finds the song in the Music table and updates that song with the properties that were sent in the request’s body. 
-• Returns a 200 status code. 
-• Responds with the newly updated song object. 
+☑️• Accepts a value from the request’s URL (The id of the song to be updated). 
+☑️• Accepts a body object from the request in the form of a Song model. 
+☑️• Finds the song in the Music table and updates that song with the properties that were sent in the request’s body. 
+☑️• Returns a 200 status code. 
+☑️• Responds with the newly updated song object. 
 
 (5 points) As a developer, I want to create a DELETE endpoint that does the following things: 
 • Accepts a value from the request’s URL. (The id of the song to delete).
