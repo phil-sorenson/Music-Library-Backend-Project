@@ -7,8 +7,8 @@ from .models import Song
 from .serializers import SongSerializer
 
 # Since POST will be using the same 'endpoint(URL)' as GET, we are able to put them in the same function
-@api_view(['GET'])
-def get_songs_list(request):
+@api_view(['GET','POST'])
+def songs_list(request):
     if request.method == 'GET':
             # Query to GET all of the songs from database
         songs = Song.objects.all()
@@ -18,9 +18,7 @@ def get_songs_list(request):
             # all information/objects queried comes back as "data"👇(hence why we want to return 'serializer.data' below)
         return Response(serializer.data, status = status.HTTP_200_OK)
 
-@api_view(['POST'])        
-def post_song(request):
-    if request.method == 'POST':
+    elif request.method == 'POST':
             # Query to CREATE/POST a new song to database/list
             #! CODE THOUGHT PROCESS: What do we have to do/implement to ACCEPT the POST/request for a new Song object
                 # 'request.data' == The POST request sent in from Postman or some other API site
